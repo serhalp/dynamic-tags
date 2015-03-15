@@ -12,13 +12,38 @@ Dynamic object properties through rules
 npm install dynamic-tags
 ```
 
-```javascript
-var dynamicTags = require('dynamic-tags');
+```coffee
+tags = require 'dynamic-tags'
+_ = require 'underscore'
+
+tags.registerTag 'gluten-free', (obj) ->
+  _(obj.ingredients).every (ingredient) ->
+    'gluten-free' in ingredient.tags
+
+# returns `false`
+tags.computeTag 'gluten-free', {
+  name: 'Medium Pizza'
+  ingredients: [
+    { name: 'White flour', tags: ['vegan', 'dairy-free', 'vegetarian', 'paleo', 'sodium-free'] }
+    { name: 'Water', tags: ['vegan', 'gluten-free', 'dairy-free', 'vegetarian', 'paleo', 'sodium-free'] }
+    { name: 'Sea salt', tags: ['vegan', 'gluten-free', 'dairy-free', 'vegetarian', 'paleo'] }
+  ]
+}
+
+# returns `true`
+tags.computeTag 'gluten-free', {
+  name: 'Sourdough Loaf'
+  ingredients: [
+    { name: 'Rice flour', tags: ['vegan', 'gluten-free', 'dairy-free', 'vegetarian', 'sodium-free'] }
+    { name: 'Water', tags: ['vegan', 'gluten-free', 'dairy-free', 'vegetarian', 'paleo', 'sodium-free'] }
+    { name: 'Sea salt', tags: ['vegan', 'gluten-free', 'dairy-free', 'vegetarian', 'paleo'] }
+  ]
+}
 ```
 
 ## Contributing
 
-Please follow our [Code of Conduct](https://github.com/goodeggs/mongoose-webdriver/blob/master/CODE_OF_CONDUCT.md)
+Please follow our [Code of Conduct](https://github.com/goodeggs/dynamic-tags/blob/master/CODE_OF_CONDUCT.md)
 when contributing to this project.
 
 ```

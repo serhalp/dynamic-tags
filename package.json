@@ -2,10 +2,7 @@
   "name": "dynamic-tags",
   "version": "1.0.0",
   "description": "Dynamic object properties through rules",
-  "author": "Good Eggs <open-source@goodeggs.com>",
-  "contributors": [
-    "Philippe Serhal <philippe@goodeggs.com>"
-  ],
+  "author": "Philippe Serhal <philippe@goodeggs.com>",
   "license": "MIT",
   "keywords": [
     "tags",
@@ -22,7 +19,9 @@
   "dependencies": {},
   "devDependencies": {
     "coffee-script": ">=1.8.x",
-    "mocha": "~1.x.x"
+    "mocha": ">=2.0.0",
+    "chai": "^2.1.1",
+    "underscore": "^1.8.2"
   },
   "scripts": {
     "compile": "coffee --bare --compile --output lib/ src/",
