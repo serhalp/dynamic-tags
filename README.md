@@ -2,9 +2,8 @@
 
 Dynamic object properties through rules
 
-[![NPM version](http://img.shields.io/npm/v/dynamic-tags.svg?style=flat-square)](https://www.npmjs.org/package/dynamic-tags)
-[![Build Status](http://img.shields.io/travis/goodeggs/dynamic-tags.svg?style=flat-square)](https://travis-ci.org/goodeggs/dynamic-tags)
-[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/goodeggs/dynamic-tags/blob/master/LICENSE.md)
+[![Build Status](http://img.shields.io/travis/serhalp/dynamic-tags.svg?style=flat-square)](https://travis-ci.org/serhalp/dynamic-tags)
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/serhalp/dynamic-tags/blob/master/LICENSE.md)
 
 ## Usage
 
@@ -43,11 +42,11 @@ tags.computeTag 'gluten-free', {
 
 ## Contributing
 
-Please follow our [Code of Conduct](https://github.com/goodeggs/dynamic-tags/blob/master/CODE_OF_CONDUCT.md)
+Please follow our [Code of Conduct](https://github.com/serhalp/dynamic-tags/blob/master/CODE_OF_CONDUCT.md)
 when contributing to this project.
 
 ```
-$ git clone https://github.com/goodeggs/dynamic-tags && cd dynamic-tags
+$ git clone https://github.com/serhalp/dynamic-tags && cd dynamic-tags
 $ npm install
 $ npm test
 ```
